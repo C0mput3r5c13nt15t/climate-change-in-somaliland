@@ -1,6 +1,9 @@
 body {
   margin: 0;
   scroll-behavior: smooth;
+  background: white;
+
+  --link-color: red;
 }
 
 body::-webkit-scrollbar {
@@ -11,11 +14,13 @@ h1, h2, h3, h4, h5, h6, a, p {
   margin: 0;
   padding: 0;
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
-  color: red;
+  color: var(--link-color, red);
   cursor: pointer;
+  text-decoration: underline;
 }
 
 q {
@@ -30,33 +35,76 @@ q::before {
   font-size: 3.5rem;
 }
 
-.landing img {
+.toolbar {
   width: 100%;
+  height: 3rem;
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.toolbar h1 {
+  line-height: 3rem;
+  font-size: 1.5rem;
+  width: min(90%, 1200px);
+  margin: auto;
+}
+
+.landing img {
+  display: block;
+  width: 100%;
+  height: 66vh;
   margin: 0;
-  height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+}
+
+.landing h1 {
+  position: absolute;
+  left: 50%;
+  top: 33vh;
+  transform: translate(-50%, -50%);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: white;
 }
 
 #overlay {
   position: fixed;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.3);
+  left: -5%;
+  top: -5%;
+  background-color: rgba(0, 0, 0, 0.8);
   filter: blur(2px);
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   display: none;
   z-index: 50;
 }
 
-#c1-b1, #c1-b2, #c1-b3, #c1-b4, #c1-b5 {
+.article {
+  height: 75%;
   display: none;
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: blue;
+  background-color: white;
   z-index: 100;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.article h1 {
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: normal;
+}
+
+.article p {
+  width: 80%;
 }
 
 .content {
@@ -65,9 +113,23 @@ q::before {
   margin-right: auto;
 }
 
+.content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 2rem;
+  width: max-content;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .grid {
   width: 100%;
   height: 500px;
+  overflow: hidden;
 }
 
 .c1 {
@@ -76,50 +138,61 @@ q::before {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 0px 0px;
+  gap: 4px 4px;
   grid-auto-flow: row;
   grid-template-areas:
     "c1-b1 c1-b1 c1-b1 c1-b1 c1-b2"
     "c1-b3 c1-b3 c1-b4 c1-b4 c1-b2"
     "c1-b3 c1-b3 c1-b5 c1-b5 c1-b5";
+  color: white;
 }
 
 .c1-b1 {
   grid-area: c1-b1;
-  background-image: url('https://assets.digitalocean.com/labs/images/community_bg.png');
+  background-image: url('https://images.unsplash.com/photo-1588349482083-036b31c6eca3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .c1-b2 {
   grid-area: c1-b2;
-  background-image: url('https://assets.digitalocean.com/labs/images/community_bg.png');
+  background-image: url('https://images.unsplash.com/photo-1629814148452-eb497db38722?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .c1-b4 {
   grid-area: c1-b4;
-  background-image: url('https://assets.digitalocean.com/labs/images/community_bg.png');
+  background-image: url('https://images.unsplash.com/photo-1530710529758-db0b08c11303?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .c1-b3 {
   grid-area: c1-b3;
-  background-image: url('https://assets.digitalocean.com/labs/images/community_bg.png');
+  background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-eu.s3.amazonaws.com%2F45c0d5b8-f1da-11e8-9623-d7f9881e729f?fit=scale-down&source=next&width=700');
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .c1-b5 {
   grid-area: c1-b5;
-  background-image: url('https://assets.digitalocean.com/labs/images/community_bg.png');
+  background-image: url('https://images.unsplash.com/photo-1638097117591-8ce92967e52e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80');
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bg {
   width: 100%;
   height: 100%;
-  background: linear-gradient(to left, transparent 50%, blue 50%) right;
+  background: linear-gradient(to left, transparent 50%, rgba(0, 0, 0, 0.5) 50%) right;
   background-size: 200%;
-  transition: 0.4s ease-out;
+  transition: 0.3s ease;
 }
 
 .bg:hover {
@@ -128,6 +201,24 @@ q::before {
 
 .text {
   padding: 5px;
+  padding-right: 10px;
+  color: transparent;
+  transition: 0.35s ease;
+  height: 100%;
+}
+
+.text a {
+  color: transparent;
+  transition-delay: 0.05s;
+  transition-duration: 0.35s;
+}
+
+.text:hover a {
+  color:  var(--link-color, red);
+}
+
+.text:hover {
+  color: white;
 }
 
 .c2 {
@@ -136,21 +227,37 @@ q::before {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 0px 0px;
+  gap: 4px 4px;
   grid-auto-flow: row;
   grid-template-areas:
     "c2-b1 c2-b1 c2-b1 c2-b2 c2-b2"
-    "c2-b1 c2-b1 c2-b1 c2-b3 c2-b3"
-    "c2-b4 c2-b4 c2-b4 c2-b3 c2-b3";
+    "c2-b1 c2-b1 c2-b1 c2-b2 c2-b2"
+    "c2-b3 c2-b3 c2-b3 c2-b2 c2-b2";
 }
 
-.c2-b1 { grid-area: c2-b1; }
+.c2-b1 {
+  grid-area: c2-b1;
+  background-image: url('https://images.unsplash.com/photo-1615092296061-e2ccfeb2f3d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-.c2-b2 { grid-area: c2-b2; }
+.c2-b2 {
+  grid-area: c2-b2;
+  background-image: url('https://images.unsplash.com/photo-1611270418597-a6c77f4b7271?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=698&q=80');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-.c2-b3 { grid-area: c2-b3; }
-
-.c2-b4 { grid-area: c2-b4; }
+.c2-b3 {
+  grid-area: c2-b3;
+  background-image: url('https://images.unsplash.com/photo-1465917566611-efba2904dd8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .c3 {
   height: 100%;
@@ -158,7 +265,7 @@ q::before {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 0px 0px;
+  gap: 4px 4px;
   grid-auto-flow: row;
   grid-template-areas:
     "c3-b1 c3-b1 c3-b2 c3-b2 c3-b2"
@@ -166,18 +273,54 @@ q::before {
     "c3-b1 c3-b1 c3-b3 c3-b4 c3-b5";
 }
 
-.c3-b1 { grid-area: c3-b1; }
+.c3-b1 {
+  grid-area: c3-b1;
+  background-image: url('https://images.unsplash.com/photo-1552799446-159ba9523315?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-.c3-b2 { grid-area: c3-b2; }
+.c3-b2 {
+  grid-area: c3-b2;
+  background-image: url('https://www.customtruck.com/wp-content/uploads/2020/05/Water-Trucks-1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-.c3-b3 { grid-area: c3-b3; }
+.c3-b3 {
+  grid-area: c3-b3;
+  background-image: url('https://media-exp1.licdn.com/dms/image/C4D0BAQGZxC_HWmyM-A/company-logo_200_200/0/1608304225835?e=2159024400&v=beta&t=9SNFeUVlzbOwuhI1SFCCSnOyqjmnPrHTvqKCP_Ce1CA');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
-.c3-b4 { grid-area: c3-b4; }
+.c3-b4 {
+  grid-area: c3-b4;
+  background-image: url('https://www.looktothestars.org/photo/2734-actionaid/story_half_width.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
-.c3-b5 { grid-area: c3-b5; }
-
+.c3-b5 {
+  grid-area: c3-b5;
+  background-image: url('https://upload.wikimedia.org/wikipedia/de/thumb/5/56/Care_Logo.svg/1200px-Care_Logo.svg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
 footer {
-  margin-top: 100px;
-  margin-bottom: 20px;
+  margin-top: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #f2f2f2;
+}
+
+footer p {
+  width: min(90%, 1200px);
+  margin: auto;
 }
