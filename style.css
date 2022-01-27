@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open sans', sans-serif;
 }
 
 a {
@@ -64,7 +64,6 @@ q::before {
   left: 50%;
   top: 33vh;
   transform: translate(-50%, -50%);
-  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 3rem;
   color: white;
@@ -83,17 +82,10 @@ q::before {
 }
 
 .article {
-  height: 75%;
   display: none;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
   background-color: white;
-  z-index: 100;
-  padding: 10px;
   border-radius: 5px;
-  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .article h1 {
@@ -104,7 +96,8 @@ q::before {
 }
 
 .article p {
-  width: 80%;
+  width: max(80%, 600px);
+  white-space: pre-line;
 }
 
 .content {
@@ -114,7 +107,6 @@ q::before {
 }
 
 .content h1 {
-  font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   font-size: 2rem;
   width: max-content;
@@ -128,7 +120,6 @@ q::before {
 
 .grid {
   width: 100%;
-  height: 500px;
   overflow: hidden;
 }
 
@@ -211,6 +202,7 @@ q::before {
   color: transparent;
   transition-delay: 0.05s;
   transition-duration: 0.35s;
+  word-wrap: break-word;
 }
 
 .text:hover a {
@@ -264,11 +256,10 @@ q::before {
   margin: 0;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 4px 4px;
   grid-auto-flow: row;
   grid-template-areas:
-    "c3-b1 c3-b1 c3-b2 c3-b2 c3-b2"
     "c3-b1 c3-b1 c3-b2 c3-b2 c3-b2"
     "c3-b1 c3-b1 c3-b3 c3-b4 c3-b5";
 }
