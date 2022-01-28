@@ -1,0 +1,142 @@
+html {
+  scroll-behavior: smooth;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: var(--link-color, green);
+}
+
+::selection {
+  color: white;
+  background: var(--link-color, green);
+}
+
+body {
+  margin: 0;
+  background: white;
+
+  --link-color: #89d136;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1, h2, h3, h4, h5, h6, a, p {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Merriweather', serif;
+}
+
+a {
+  color: var(--link-color, green);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.toolbar {
+  height: 3rem;
+  z-index: 100;
+  width: 100%;
+  background: rgba(137, 209, 54, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.toolbar h1 {
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 2.1rem;
+  width: min(90%, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-family: 'Merriweather', serif;
+}
+
+.toolbar a {
+  text-decoration: none;
+}
+
+.landing img {
+  display: block;
+  width: 100%;
+  height: 66vh;
+  margin: 0;
+  object-fit: cover;
+}
+
+.landing h1 {
+  cursor: default;
+  position: absolute;
+  left: 50%;
+  top: 33vh;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 3rem;
+  color: white;
+}
+
+.landing h1::before {
+  background: var(--link-color, green);
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.landing h1:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.content {
+  width: min(90%, 1200px);
+}
+
+.content h1 {
+  position: relative;
+  font-weight: normal;
+  font-size: 2rem;
+  width: max-content;
+  text-align: center;
+  margin-top: 55px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--link-color, red);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content h1::before {
+  background: var(--link-color, green);
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.content h1:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+footer {
+  margin-top: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #f7f7f7;
+}
+
+footer p {
+  width: min(90%, 1200px);
+  margin: auto;
+}
