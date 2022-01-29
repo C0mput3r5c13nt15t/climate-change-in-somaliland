@@ -16,7 +16,7 @@
   height: 100%;
   background: linear-gradient(to left, transparent 50%, rgba(0, 0, 0, 0.55) 50%) right;
   background-size: 200%;
-  transition: 0.4s;
+  transition: 0.5s ease-in-out;
 }
 
 .bg:hover {
@@ -27,7 +27,8 @@
   padding: 7px;
   padding-right: 10px;
   color: transparent;
-  transition: 0.35s ease;
+  transition-delay: 0.3s;
+  transition: 0.5s ease-in-out;
   height: 100%;
 }
 

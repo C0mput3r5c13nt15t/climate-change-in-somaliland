@@ -19,6 +19,8 @@
   object-fit: contain;
   max-width: 100%;
   border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 ul li {
@@ -29,13 +31,21 @@ ul li {
   font-weight: 450;
 }
 
+.back-to-home {
+  display: block;
+  margin-top: 50px;
+  font-size: 1.3rem;
+}
+
 .content {
   width: min(90%, 800px);
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .otro-blockquote{
+  text-align: left;
   font-size: 1.5em;
   width:70%;
   margin:50px auto;

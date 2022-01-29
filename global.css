@@ -69,14 +69,19 @@ a {
   object-fit: cover;
 }
 
-.landing h1 {
-  cursor: default;
+.title {
   position: absolute;
   left: 50%;
   top: 33vh;
   transform: translate(-50%, -50%);
+}
+
+.landing h1 {
+  cursor: default;
   font-weight: 700;
   font-size: 3rem;
+  color: white;
+  margin: 10px;
   color: white;
 }
 
@@ -98,6 +103,7 @@ a {
 
 .content {
   width: min(90%, 1200px);
+  margin: auto;
 }
 
 .content h1 {
