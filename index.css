@@ -24,8 +24,7 @@
 }
 
 .text {
-  padding: 7px;
-  padding-right: 10px;
+  padding: 7px 10px 7px 7px;
   color: transparent;
   transition-delay: 0.3s;
   transition: 0.5s ease-in-out;
@@ -109,17 +108,17 @@
 
 #c2-b1 {
   grid-area: c2-b1;
-  background-image: url('https://images.unsplash.com/photo-1615092296061-e2ccfeb2f3d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+  background-image: url('https://cdnuploads.aa.com.tr/uploads/Contents/2020/12/09/thumbs_b_c_b3698ef3aba9e82b79f634362fb82d53.jpg?v=140216');
 }
 
 #c2-b2 {
   grid-area: c2-b2;
-  background-image: url('https://images.unsplash.com/photo-1611270418597-a6c77f4b7271?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=698&q=80');
+  background-image: url('https://render.fineartamerica.com/images/rendered/default/poster/8/10/break/images/artworkimages/medium/1/gaseous-air-pollution-michal-boubin.jpg');
 }
 
 #c2-b3 {
   grid-area: c2-b3;
-  background-image: url('https://images.unsplash.com/photo-1465917566611-efba2904dd8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80');
+  background-image: url('https://assets.irinnews.org/15-115.jpg?O4eVK4vUY5ZHeUothzrW9_8YbfBlEOCl');
 }
 
 #c3 {
@@ -137,7 +136,7 @@
 
 #c3-b1 {
   grid-area: c3-b1;
-  background-image: url('https://images.unsplash.com/photo-1552799446-159ba9523315?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+  background-image: url('https://www.denverpost.com/wp-content/uploads/2019/09/AP19263525637089.jpg');
 }
 
 #c3-b2 {

@@ -80,7 +80,6 @@ a {
   cursor: default;
   font-weight: 700;
   font-size: 3rem;
-  color: white;
   margin: 10px;
   color: white;
 }
@@ -112,11 +111,8 @@ a {
   font-size: 2rem;
   width: max-content;
   text-align: center;
-  margin-top: 55px;
-  margin-bottom: 30px;
   border-bottom: 2px solid var(--link-color, red);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 55px auto 30px;
 }
 
 .content h1::before {

@@ -45,7 +45,7 @@ ul li {
   text-align: center;
 }
 
-.otro-blockquote{
+.blockquote{
   text-align: left;
   font-size: 1.5em;
   width:70%;
@@ -61,8 +61,8 @@ ul li {
   font-weight: 400;
 }
 
-.otro-blockquote::before{
-  font-family:Arial;
+.blockquote::before{
+  font-family: Arial sans-serif;
   content: "\201C";
   color:var(--link-color, red);
   font-size:4em;
@@ -71,11 +71,11 @@ ul li {
   top:-10px;
 }
 
-.otro-blockquote::after{
+.blockquote::after{
   content: '';
 }
 
-.otro-blockquote span{
+.blockquote span{
   display:block;
   color:#333333;
   font-style: normal;
