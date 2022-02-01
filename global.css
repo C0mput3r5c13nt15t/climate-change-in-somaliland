@@ -112,7 +112,7 @@ a {
   width: max-content;
   text-align: center;
   border-bottom: 2px solid var(--link-color, red);
-  margin: 55px auto 30px;
+  margin: 60px auto 30px;
 }
 
 .content h1::before {

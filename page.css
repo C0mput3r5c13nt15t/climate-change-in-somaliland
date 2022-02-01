@@ -2,12 +2,20 @@
   color: #1c1c1c;
 }
 
+.content h3 {
+  text-align: left;
+  color: #1c1c1c;
+  font-size: 1.55rem;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
 .content h1:first-of-type {
   margin-top: 110px !important;
 }
 
 .content p {
-  font-size: 1.4em;
+  font-size: 1.4rem;
   line-height:1.5;
   white-space: pre-line;
   color: #1c1c1c;
@@ -24,7 +32,7 @@
 }
 
 ul li {
-  font-size: 1.4em;
+  font-size: 1.4rem;
   line-height:1.5;
   white-space: pre-line;
   color: #1c1c1c;
@@ -47,13 +55,13 @@ ul li {
 
 .blockquote{
   text-align: left;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   width:70%;
   margin:50px auto;
   font-family: 'Merriweather', serif;
   font-style:italic;
   color: #555555;
-  padding:1.2em 30px 1.2em 75px;
+  padding:1.2rem 30px 1.2rem 75px;
   border-left:8px solid var(--link-color, red) ;
   line-height:1.6;
   position: relative;
@@ -65,7 +73,7 @@ ul li {
   font-family: Arial sans-serif;
   content: "\201C";
   color:var(--link-color, red);
-  font-size:4em;
+  font-size:4rem;
   position: absolute;
   left: 10px;
   top:-10px;
@@ -79,7 +87,7 @@ ul li {
   display:block;
   color:#333333;
   font-style: normal;
-  margin-top:1em;
+  margin-top:1rem;
   font-size: 1.1rem;
 }
 
