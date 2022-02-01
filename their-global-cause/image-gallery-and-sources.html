@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Somaliland - Image gallery and sources</title>
+  <link rel="stylesheet" href="../global.css">
+  <link rel="stylesheet" href="../page.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="page">
+  <div class="toolbar">
+    <a href="../index.html"><h1>Go Green NGO</h1></a>
+  </div>
+  <div class="content">
+    <h1>Image gallery and sources</h1>
+    <p>
+      Below you can find the images use in the first section of the page. If you click them they will navigate you to the exact image source.
+    </p>
+    <div class="images">
+      <div class="col1">
+        <img src="https://render.fineartamerica.com/images/rendered/default/poster/8/10/break/images/artworkimages/medium/1/gaseous-air-pollution-michal-boubin.jpg" alt="">
+        <img src="https://assets.irinnews.org/15-115.jpg?O4eVK4vUY5ZHeUothzrW9_8YbfBlEOCl" alt="">
+        <img src="https://www.eea.europa.eu/data-and-maps/figures/projected-global-energy-investment-2000-50-climate-change-action-scenario/figure-6-1-right.eps/image_large" alt="">
+        <img src="https://commons.wikimedia.org/wiki/File:Global_Energy_Consumption.svg#/media/File:Global_Energy_Consumption.svg" alt="">
+        <img src="https://assets.weforum.org/article/image/large_zMSlcZWG3msdZCSJQXE7tpBIlpbqCTO0OxMopRXE2jA.jpg" alt="">
+      </div>
+      <div class="col2">
+        <img src="https://cdnuploads.aa.com.tr/uploads/Contents/2020/12/09/thumbs_b_c_b3698ef3aba9e82b79f634362fb82d53.jpg?v=140216" alt="">
+        <img src="https://static01.nyt.com/images/2020/05/18/science/18CLI-HURRICANES/18CLI-HURRICANES-mediumSquareAt3X.jpg" alt="">
+        <img src="https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/inlineimage/2019-06-05/Environment%20concern-01.jpg" alt="">
+        <img src="https://www.newsecuritybeat.org/wp-content/uploads/2021/02/shutterstock_324590741-645x430.jpg" alt="">
+        <img src="https://i.guim.co.uk/img/media/1bf4d6f890dc1d5d537db6e8c1ddd22f46c69c35/0_0_3216_1930/master/3216.jpg?width=1200&quality=85&auto=format&fit=max&s=2cac94e92bcec95ff6420d9f41e00567" alt="">
+      </div>
+    </div>
+    <h1>Sources</h1>
+    <ul>
+      <li> <a href="https://youtu.be/lM2Bl_-1r-s">https://youtu.be/lM2Bl_-1r-s</a> </li>
+      <li> <a href="https://en.wikipedia.org/wiki/Somaliland?wprov=sfti1">https://en.wikipedia.org/wiki/Somaliland?wprov=sfti1</a> </li>
+      <li> <a href="https://ke.boell.org/sites/default/files/the_impact_of_climate_change_in_gabiley.pdf">https://ke.boell.org/sites/default/files/the_impact_of_climate_change_in_gabiley.pdf</a> </li>
+      <li> <a href="https://ke.boell.org/sites/default/files/the_impact_of_climate_change_in_gabiley.pdf
+https://www.ft.com/content/c8b475b2-ebf2-11e8-89c8-d36339d835c0">https://ke.boell.org/sites/default/files/the_impact_of_climate_change_in_gabiley.pdf
+        https://www.ft.com/content/c8b475b2-ebf2-11e8-89c8-d36339d835c0</a> </li>
+      <li> <a href="#"></a> </li>
+    </ul>
+
+    <a class="back-to-home" href="../index.html">Back to home page</a>
+  </div>
+  <footer>
+    <p>Copyright (c) 2021 Copyright Paul Maier, Kevin Kretz, Daniel Meiborg. All Rights Reserved.</p><br>
+    <p>DISCLAIMER This page was created for a school project and might mislead or misrepresent the actual factual situation.</p>
+  </footer>
+</div>
+</body>
+</html>
+
+<script>
+    images = document.getElementsByTagName('img')
+    for (let i = 0; i < images.length; i++) {
+        let url = images[i].src
+        images[i].onclick = function() {
+            window.open(url,'_blank');
+        };
+        images[i].style.cursor = "pointer";
+    }
+
+</script>
